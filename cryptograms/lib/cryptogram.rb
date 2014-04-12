@@ -1,2 +1,1 @@
-module Cryptogram
-end
+require 'cryptogram/options'
