@@ -13,11 +13,11 @@ module Cryptogram
       OptionParser.new do |opts|
         opts.banner = "Usage: cryptogram [options]"
 
-        opts.on("-p", "--puzzle PATH", "Path to the puzzle") do |puzzle|
+        opts.on("-p", "--puzzle PATH", "Provide a path to the puzzle") do |puzzle|
           @puzzle = puzzle
         end
 
-        opts.on("-d", "--dict PATH", "Path to the dictionary") do |dict|
+        opts.on("-d", "--dictionary PATH", "Provide a path to the dictionary") do |dictionary|
           @dictionary = dictionary
         end
 
