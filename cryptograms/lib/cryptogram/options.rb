@@ -2,6 +2,7 @@ require 'optparse'
 
 module Cryptogram
   class Options
+    attr_reader :puzzle, :dictionary
 
     def initialize(argv)
       parse(argv)
@@ -30,7 +31,7 @@ module Cryptogram
           argv = ["-h"] if argv.empty?
           opts.parse!(argv)
         rescue OptionParser::ParseError => e
-          STDERR.puts e.message, "\n", opts
+          STDERR.puts e.message, opts
           exit(-1)
         end
       end
