@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'cryptogram'
+
+solver = Cryptogram::Solver.new(ARGV)
+solver.solve
