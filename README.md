@@ -1,9 +1,11 @@
-/rub,ee'kwiz/
+Rubyquis
 =====
 
-Basically, I want to learn Ruby, and solve problems. In an attempt to be somewhat **awesome** at _rubying_ (is this a real word?), I want to try out some of the Ruby challenges found in The Pragmatic Programmers Best of Ruby Quiz book. There are twenty-five (25) different problems in the book. This repository will hold the code to my solution attempts.
+Basically, I want to learn how to solve problems using the Ruby programming language. This repository will hold the code to my solution attempts from challenges found in the `Pragmatic Programmers Best of Ruby Quiz` book. There are a total of twenty-five (25) different problems in the book. If you're like me, I encourage that you purchase a copy of the book as well.
 
-## Challenges
+**Note:** I do not include the problems in here, for obvious reasons.
+
+### Challenges
 Here are some of the different challenges by name.
 
 * Mad Libs
@@ -18,11 +20,9 @@ Here are some of the different challenges by name.
 * Knight's Travails
 * ... and more!
 
-## Information
-Purchase: http://pragprog.com/book/fr_quiz/best-of-ruby-quiz
+### Information
+**Purchase:** http://pragprog.com/book/fr_quiz/best-of-ruby-quiz
 
-Published: 03-01-2006
+**Published:** 03-01-2006
 
-ISBN #: 978-0-9766-9407-6
-
-
+**ISBN #:** 978-0-9766-9407-6
