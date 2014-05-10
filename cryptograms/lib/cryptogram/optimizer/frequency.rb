@@ -22,6 +22,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 =end
 
-require 'cryptogram/options'
-require 'cryptogram/solver'
-require 'cryptogram/optimizer'
+module Cryptogram
+  module Optimizer
+    class Frequency
+    end
+  end
+end
