@@ -24,7 +24,40 @@ SOFTWARE.
 
 module Cryptogram
   module Optimizer
+    #
+    # Provides a list of possible candidates based on letter count.
+    #
+    # @author James Espinosa <jamesejr@gmail.com>
+    #
     class Candidate
+      attr_reader :dictionary
+      attr_reader :mappings
+
+      def initialize(dictionary)
+        @dictionary = dictionary
+        @mappings   = map(dictionary)
+      end
+
+      def map(dictionary)
+        words = {}
+
+        File.open(dictionary).each do |word|
+          word = word.chomp
+          length = word.length
+          words[word] = length
+        end
+        words
+      end
+
+      def fetch_for(word)
+        candidates = []
+
+        length = word.chomp.length.to_i
+        results = mappings.select { |k, v| mappings[k] == length }
+
+        results.each_key { |k| candidates << k }
+        return candidates
+      end
     end
   end
 end

@@ -32,13 +32,17 @@ module Cryptogram
     # @return [Cryptogram::Options]
     attr_reader :options
 
+    # @return [Cryptogram::Optimizer::Candidate]
+    attr_reader :candidate
+
     #
     # Instantiates Solver class with user options.
     #
     # @param [Cryptogram::Options] argv
     #
     def initialize(argv)
-      @options = Options.new(argv)
+      @options   = Options.new(argv)
+      @candidate = Optimizer::Candidate.new(options.dictionary)
     end
 
     #
@@ -48,7 +52,12 @@ module Cryptogram
     #
     def solve
       if files_exist?
-        #do magic
+        words = []
+        File.open(options.puzzle).each { |word| words << word.chomp }
+
+        words.each do |word|
+          candidates = candidate.fetch_for(word)
+        end
       end
     end
 
@@ -62,20 +71,6 @@ module Cryptogram
     # @private
     def files_exist?
       File.exists?(options.dictionary) and File.exists?(options.puzzle)
-    end
-
-    #
-    # Helper method that retrieves words from the file specified.
-    #
-    # @param file [String] The file to read the words from
-    # @return [Array] A collection of words
-    # @private
-    def get_words_from(file)
-      if File.exists?(file)
-        words = []
-        File.open(file).each { |word| words << word.chomp }
-        return words
-      end
     end
   end
 end
